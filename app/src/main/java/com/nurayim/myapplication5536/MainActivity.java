@@ -20,21 +20,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initViews();
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications,R.id.profile_fragment)
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.profile_fragment)
                 .build();
-        navController =(NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navController = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         NavController navCo = navController.getNavController();
-      //  NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-       // NavigationUI.setupWithNavController(navView, navController);
+        //  NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        // NavigationUI.setupWithNavController(navView, navController);
+    }
+
+    private void initViews() {
+
     }
     // поддержка кнопки назад
     //@Override
     //public boolean onSupportNavigateUp()
-   // {
-     //   return n;
+    // {
+    //   return n;
     //}
 }
