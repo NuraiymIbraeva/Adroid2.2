@@ -32,7 +32,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TaskAdapter.ViewHolder holder, int position) {
-        if(position % 2 ==0){
+        if(position % 2 == 0){
             holder.itemView.setBackgroundColor(Color.YELLOW);
             holder.bind(list.get(position));
         }
@@ -83,7 +83,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textTitle = itemView.findViewById(R.id.textTitle);
+            textTitle = itemView.findViewById(R.id.text_title);
 
         }
 
@@ -92,7 +92,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(itemView.getContext(),String.valueOf(getAdapterPosition()) + " : " + task.getTitle(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(itemView.getContext(),String.valueOf(getAdapterPosition()) + " : "
+                            + task.getTitle(), Toast.LENGTH_SHORT).show();
                 }
             });
 
