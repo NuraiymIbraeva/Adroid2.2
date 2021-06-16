@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".auth.PhoneFragment">
+
+    <EditText
+        android:id="@+id/edit_Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите номер телефона "
+        android:background="@color/white"
+        android:padding="16sp"
+        />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Продолжить"
+        android:layout_below="@+id/edit_Phone"
+        android:layout_marginTop="12dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edit_Code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите код "
+        android:background="@color/white"
+        android:padding="16sp"
+        android:layout_below="@id/btnContinue"
+        android:layout_marginTop="12sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24sp"
+        android:text="Edit code"
+        android:layout_below="@+id/edit_Code"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

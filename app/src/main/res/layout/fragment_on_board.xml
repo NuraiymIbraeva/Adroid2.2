@@ -3,7 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.onBoard.on_board_Fragment">
+    tools:context=".ui.onBoard.OnBoardFragment">
+
+    <Button
+        android:id="@+id/button_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+        android:text="skip"
+
+        />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"

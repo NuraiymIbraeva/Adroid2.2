@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".TaskFragment">
+    tools:context=".TaskFragment.TaskFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <EditText

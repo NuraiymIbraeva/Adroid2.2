@@ -1,4 +1,4 @@
-package com.nurayim.myapplication5536;
+package com.nurayim.myapplication5536.TaskFragment;
 
 import android.os.Bundle;
 
@@ -13,12 +13,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.nurayim.myapplication5536.App;
 import com.nurayim.myapplication5536.R;
+import com.nurayim.myapplication5536.models.Task;
 
 
 public class TaskFragment extends Fragment {
 
     private EditText editText;
+
 
 
 
@@ -45,6 +48,9 @@ public class TaskFragment extends Fragment {
     // получение содержимого с EditText
     private void save() {
         String text = editText.getText().toString();// Вот это чась вытаскивает содержимое с EditTexta
+        Task task = new Task(text);
+
+        App.getAppDatabase().taskDao().insert(task);
         Bundle bundle = new Bundle();//Это типа мы собираем данные в упаковку типо упаковываем
         bundle.putString("text", text);// И в эту упаковку добавляем стринг по ключи текст
         getParentFragmentManager().setFragmentResult("rk_task",bundle);
